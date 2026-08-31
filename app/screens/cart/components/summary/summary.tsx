@@ -24,11 +24,11 @@ export const Summary: FC<SummaryProps> = ({ total }) => {
     return (
         <div className="w-[352px] h-[376px] flex flex-col border border-primary rounded-2xl p-6 gap-6">
             <div className="flex flex-col gap 3">
-                {summaryItems.map((si, index) => {
+                {summaryItems.map((si) => {
                     return (
                         <div
                             className="flex flex-row justify-between "
-                            key={index}
+                            key={si.label}
                         >
                             <p className="pSmaller">{si.label}</p>
                             <p className="pSmaller">${si.value}</p>

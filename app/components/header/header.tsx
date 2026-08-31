@@ -6,7 +6,7 @@ export const Header = () => {
     const { headerTitles, headerIcons, goToMainPage } = useHeaderHelper();
 
     return (
-        <div className="header w-full">
+        <div className="header w-full sticky top-0 z-50 bg-white">
             <div className="flex flex-column">
                 <div className="flex flex-row justify-between py-4 w-full">
                     <h1
@@ -17,9 +17,9 @@ export const Header = () => {
                     </h1>
 
                     <div className="flex flex-col md:flex-row align-center items-center gap-4 py-1">
-                        {headerTitles.map(({ text, onClick }, index) => (
+                        {headerTitles.map(({ text, onClick }) => (
                             <Link
-                                key={index}
+                                key={text}
                                 text={text || ''}
                                 onClick={onClick}
                             />
@@ -28,13 +28,13 @@ export const Header = () => {
 
                     <div className="flex flex-col md:flex-row align-center items-center gap-4 py-1">
                         {headerIcons.map(
-                            ({ icon, itemsAmount, onClick }, index) => (
+                            ({ icon, itemsAmount, onClick }) => (
                                 <div
-                                    key={index}
+                                    key={icon}
                                     onClick={onClick}
                                     className="relative text-black cursor-pointer"
                                 >
-                                    {itemsAmount && (
+                                    {!!itemsAmount && (
                                         <div className="absolute -top-2 -right-2 min-w-[18px] h-[18px] px-1 flex items-center justify-center rounded-full bg-primary text-white text-[11px] leading-none">
                                             {itemsAmount}
                                         </div>

@@ -45,6 +45,7 @@ export const Product: FC<ProductItem & ProductInjectedProps> = ({
                 <div className="flex flex-row gap-4">
                     <div className="min-w-[96px] flex flex-row border border-primary rounded-2xl px-3 py-2 gap-2 justify-center">
                         <img
+                            className="cursor-pointer"
                             src={Plus}
                             width={16}
                             height={16}
@@ -54,6 +55,7 @@ export const Product: FC<ProductItem & ProductInjectedProps> = ({
                         <p className="pSmaller">{quantity}</p>
 
                         <img
+                            className="cursor-pointer"
                             src={Minus}
                             width={16}
                             height={16}
@@ -62,6 +64,7 @@ export const Product: FC<ProductItem & ProductInjectedProps> = ({
                     </div>
 
                     <img
+                        className="cursor-pointer"
                         src={Garbage}
                         width={24}
                         height={24}

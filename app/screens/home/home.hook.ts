@@ -3,7 +3,9 @@ import type { Route } from './+types/home';
 
 import { useState } from 'react';
 
-export const useHomeHelper = () => {
+import { PRODUCTS_BY_PAGE } from '@consts';
+
+export const useHomeHelper = (page: number, total: number) => {
     const [_, setSearchParams] = useSearchParams();
 
     const [filters, setFilters] = useState<{
@@ -53,5 +55,13 @@ export const useHomeHelper = () => {
         });
     };
 
-    return { filters, onChangePage, onChangeCategory, onChangeSortBy };
+    const showingString = `Showing ${PRODUCTS_BY_PAGE * (page - 1) + 1}-${page * PRODUCTS_BY_PAGE > total ? total : page * PRODUCTS_BY_PAGE} of ${total}`;
+
+    return {
+        filters,
+        showingString,
+        onChangePage,
+        onChangeCategory,
+        onChangeSortBy,
+    };
 };

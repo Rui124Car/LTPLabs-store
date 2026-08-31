@@ -31,7 +31,7 @@ export const useHeaderHelper = () => {
             }, 0),
             onClick: () => navigate('/cart'),
         },
-        { icon: BloomIcon, onClick: () => navigate('/deals') },
+        { icon: BloomIcon, onClick: () => navigate('/') },
     ];
 
     return { headerTitles, headerIcons, goToMainPage: () => navigate('/') };

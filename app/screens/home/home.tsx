@@ -37,8 +37,13 @@ export async function loader({ request }: Route.LoaderArgs) {
 export default function Home({ loaderData }: Route.ComponentProps) {
     const { products, categories, currentPage = 1 } = loaderData;
 
-    const { filters, onChangeCategory, onChangePage, onChangeSortBy } =
-        useHomeHelper();
+    const {
+        filters,
+        showingString,
+        onChangeCategory,
+        onChangePage,
+        onChangeSortBy,
+    } = useHomeHelper(currentPage, products.total);
 
     return (
         <div className="flex flex-row gap-12">
@@ -46,9 +51,7 @@ export default function Home({ loaderData }: Route.ComponentProps) {
                 <div className="flex flex-row justify-between items-center">
                     <Filter onChangeSortBy={onChangeSortBy} />
 
-                    <p className="p">
-                        {`Showing ${PRODUCTS_BY_PAGE * (currentPage - 1) + 1}-${currentPage * PRODUCTS_BY_PAGE} of ${products.total}`}
-                    </p>
+                    <p className="p">{showingString}</p>
                 </div>
 
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -64,9 +67,7 @@ export default function Home({ loaderData }: Route.ComponentProps) {
                 </div>
 
                 <Footer
-                    numberOfPages={Math.floor(
-                        products.total / PRODUCTS_BY_PAGE
-                    )}
+                    numberOfPages={Math.ceil(products.total / PRODUCTS_BY_PAGE)}
                     currentPage={currentPage}
                     gotToNextPage={() => onChangePage(currentPage + 1)}
                     goToPreviousPage={() => onChangePage(currentPage - 1)}

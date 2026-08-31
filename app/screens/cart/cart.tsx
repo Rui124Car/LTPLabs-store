@@ -20,7 +20,10 @@ export default function Cart() {
             <div className="flex flex-1 flex-col gap-4">
                 {products.map((product, index) => {
                     return (
-                        <div className="flex flex-col gap-4">
+                        <div
+                            key={product.id}
+                            className="flex flex-col gap-4"
+                        >
                             <Product
                                 key={product.id}
                                 onAdd={() => updateQuantity(product.id, 1)}
