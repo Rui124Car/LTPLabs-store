@@ -6,7 +6,7 @@ export const Header = () => {
     const { headerTitles, headerIcons, goToMainPage } = useHeaderHelper();
 
     return (
-        <div className="header w-full">
+        <div className="header w-full sticky top-0 z-50 bg-white">
             <div className="flex flex-column">
                 <div className="flex flex-row justify-between py-4 w-full">
                     <h1
