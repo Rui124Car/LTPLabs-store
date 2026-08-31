@@ -17,9 +17,9 @@ export const Header = () => {
                     </h1>
 
                     <div className="flex flex-col md:flex-row align-center items-center gap-4 py-1">
-                        {headerTitles.map(({ text, onClick }, index) => (
+                        {headerTitles.map(({ text, onClick }) => (
                             <Link
-                                key={index}
+                                key={text}
                                 text={text || ''}
                                 onClick={onClick}
                             />
@@ -28,9 +28,9 @@ export const Header = () => {
 
                     <div className="flex flex-col md:flex-row align-center items-center gap-4 py-1">
                         {headerIcons.map(
-                            ({ icon, itemsAmount, onClick }, index) => (
+                            ({ icon, itemsAmount, onClick }) => (
                                 <div
-                                    key={index}
+                                    key={icon}
                                     onClick={onClick}
                                     className="relative text-black cursor-pointer"
                                 >
