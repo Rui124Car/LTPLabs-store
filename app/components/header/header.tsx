@@ -34,7 +34,7 @@ export const Header = () => {
                                     onClick={onClick}
                                     className="relative text-black cursor-pointer"
                                 >
-                                    {itemsAmount && (
+                                    {!!itemsAmount && (
                                         <div className="absolute -top-2 -right-2 min-w-[18px] h-[18px] px-1 flex items-center justify-center rounded-full bg-primary text-white text-[11px] leading-none">
                                             {itemsAmount}
                                         </div>
