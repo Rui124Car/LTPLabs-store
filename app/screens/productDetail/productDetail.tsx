@@ -1,5 +1,5 @@
 import { Button } from '@components';
-import type { Route } from './+types/ProductDetail';
+import type { Route } from './+types/productDetail';
 
 import './productDetail.css';
 
