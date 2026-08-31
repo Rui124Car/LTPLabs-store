@@ -22,8 +22,6 @@ export const useHeaderHelper = () => {
         { text: 'Account', onClick: () => navigate('/account') },
     ];
 
-    console.log('>>>', products);
-
     const headerIcons = [
         { icon: UserIcon, onClick: () => navigate('/account') },
         {
