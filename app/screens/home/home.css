@@ -1,0 +1,27 @@
+.select {
+    padding: 8px 16px;
+    border: 1px solid var(--color-primary);
+    border-radius: 8px;
+    color: #0f172a;
+    cursor: pointer;
+}
+
+.p {
+    font-family: Inter;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 15px;
+    line-height: 20px;
+    color: var(--color-primary);
+    letter-spacing: 0px;
+}
+
+.label {
+    font-family: Inter;
+    font-weight: 400;
+    font-style: normal;
+    color: var(--color-primary);
+    font-size: 15px;
+    line-height: 20px;
+    letter-spacing: 0px;
+}

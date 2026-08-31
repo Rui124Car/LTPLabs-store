@@ -1,0 +1,9 @@
+.pSmaller {
+    font-family: Ubuntu;
+    font-weight: 400;
+    font-style: Regular;
+    font-size: 15px;
+    line-height: 20px;
+    letter-spacing: 0%;
+    color: var(--color-primary);
+}
