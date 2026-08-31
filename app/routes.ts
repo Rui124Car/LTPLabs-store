@@ -1,7 +1,7 @@
 import { type RouteConfig, index, route } from '@react-router/dev/routes';
 
 export default [
-    index('screens/home/Home.tsx'),
-    route('product/:id', 'screens/productDetail/ProductDetail.tsx'),
-    route('cart', 'screens/cart/Cart.tsx'),
+    index('screens/home/home.tsx'),
+    route('product/:id', 'screens/productDetail/productDetail.tsx'),
+    route('cart', 'screens/cart/cart.tsx'),
 ] satisfies RouteConfig;

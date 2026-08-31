@@ -3,7 +3,7 @@ import type { FC } from 'react';
 import NavLeft from '../../../../icons/navLeft.svg';
 import NavRight from '../../../../icons/navRight.svg';
 
-import './Footer.css';
+import './footer.css';
 
 interface FooterProps {
     numberOfPages: number;

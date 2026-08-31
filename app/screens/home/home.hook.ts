@@ -1,5 +1,5 @@
 import { useSearchParams } from 'react-router';
-import type { Route } from './+types/Home';
+import type { Route } from './+types/home';
 
 import { useState } from 'react';
 
